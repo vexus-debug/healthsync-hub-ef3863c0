@@ -38,11 +38,11 @@ export const useLabStore = create<LabState>()(
       nextSerial: () => {
         const year = new Date().getFullYear();
         const nums = get().forms
-          .map((f) => f.serial.match(/MV-\d{4}-(\d+)/))
+          .map((f) => f.serial.match(/GM-\d{4}-(\d+)/))
           .filter(Boolean)
           .map((m) => parseInt(m![1], 10));
         const next = (nums.length ? Math.max(...nums) : 0) + 1;
-        return `MV-${year}-${pad(next)}`;
+        return `GM-${year}-${pad(next)}`;
       },
       createForm: (data) => {
         const serial = (data.serial && data.serial.trim()) || get().nextSerial();
@@ -51,6 +51,6 @@ export const useLabStore = create<LabState>()(
         return newForm;
       },
     }),
-    { name: "medvic-lab-store" },
+    { name: "green-medical-lab-store" },
   ),
 );

@@ -15,7 +15,7 @@ import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { fetchLabTests, fetchTestCategories } from "@/lib/labTests";
 import { toast } from "sonner";
 
-// Source of truth: MEDVIC_LAB_TEST_FORM.pdf (Page 2). Order, wording, and
+// Source of truth: lab test requisition form. Order, wording, and
 // punctuation are matched exactly to the printed form. Do not reword.
 const TEST_GROUPS: Record<string, string[]> = {
   Hematology: [

@@ -123,16 +123,16 @@ export async function getNextSerial(): Promise<string> {
   const { data } = await supabase
     .from("test_forms")
     .select("serial")
-    .like("serial", `MV-${year}-%`)
+    .like("serial", `GM-${year}-%`)
     .order("serial", { ascending: false })
     .limit(1);
   
   let next = 1;
   if (data && data.length > 0) {
-    const match = (data[0] as any).serial.match(/MV-\d{4}-(\d+)/);
+    const match = (data[0] as any).serial.match(/GM-\d{4}-(\d+)/);
     if (match) next = parseInt(match[1], 10) + 1;
   }
-  return `MV-${year}-${String(next).padStart(5, "0")}`;
+  return `GM-${year}-${String(next).padStart(5, "0")}`;
 }
 
 export async function fetchScientists() {

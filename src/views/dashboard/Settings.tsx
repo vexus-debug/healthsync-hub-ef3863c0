@@ -26,7 +26,7 @@ const Settings = () => {
           <div><Label>Address</Label><Input defaultValue="5 Elioprawo Road, by Big Tree Junction, PHC" /></div>
           <div className="grid grid-cols-2 gap-3">
             <div><Label>Primary Phone</Label><Input defaultValue="+234 902 778 8925" /></div>
-            <div><Label>Secondary</Label><Input defaultValue="+234 153 359 3469" /></div>
+            <div><Label>Secondary</Label><Input defaultValue="+234 902 778 8925" /></div>
           </div>
         </CardContent>
       </Card>
