@@ -244,3 +244,38 @@
 
   .print-frame-body * { visibility: visible !important; }
 }
+
+/* Spatial 3D portal hero */
+.hero-portal-glow {
+  background:
+    radial-gradient(60% 50% at 50% 0%, hsl(var(--primary-glow) / 0.35), transparent 70%),
+    radial-gradient(40% 40% at 15% 80%, hsl(var(--primary-glow) / 0.18), transparent 70%),
+    radial-gradient(40% 40% at 85% 75%, hsl(var(--primary-glow) / 0.15), transparent 70%);
+}
+.hero-portal-floor {
+  background-image:
+    linear-gradient(hsl(var(--primary-foreground) / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--primary-foreground) / 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  transform: perspective(600px) rotateX(60deg);
+  transform-origin: bottom;
+  mask-image: linear-gradient(to top, black 20%, transparent);
+}
+.portal-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s, border-color 0.5s;
+  box-shadow: 0 30px 60px -30px hsl(var(--foreground) / 0.6);
+}
+.portal-card:hover {
+  border-color: hsl(var(--primary-glow) / 0.6);
+  box-shadow: 0 40px 80px -30px hsl(var(--primary-glow) / 0.55);
+}
+@media (min-width: 768px) {
+  .portal-stage { perspective: 1400px; transform-style: preserve-3d; }
+  .portal-left { transform: rotateY(18deg) translateZ(-40px); }
+  .portal-center { transform: translateZ(30px) translateY(-16px); }
+  .portal-right { transform: rotateY(-18deg) translateZ(-40px); }
+  .portal-card:hover { transform: translateZ(80px) translateY(-12px) rotateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-card, .portal-card:hover { transform: none !important; transition: none; }
+}
