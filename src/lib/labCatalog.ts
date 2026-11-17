@@ -1,5 +1,5 @@
 // Single source of truth for all lab tests, transcribed meticulously from
-// MEDVIC_GOODHEALTH_MEDICAL_LABORATORY_LAB_REPORT_2.pdf and MEDVIC_LAB_TEST_FORM.pdf.
+// Lab report and test form reference data.
 // Do not remove fields — every entry maps to a row on the printed report.
 
 export type FieldType = "number" | "text" | "select" | "textarea";
@@ -337,7 +337,7 @@ export interface TestForm {
 
 export const MOCK_FORMS: TestForm[] = [
   {
-    serial: "MV-2026-00184",
+    serial: "GM-2026-00184",
     patientName: "Chinedu Okafor",
     age: 34, gender: "Male", phone: "+234 803 555 0142",
     referredBy: "Dr. A. Bello", doctorPhone: "+234 802 111 0091",
@@ -350,7 +350,7 @@ export const MOCK_FORMS: TestForm[] = [
     bill: "Patient", status: "Pending",
   },
   {
-    serial: "MV-2026-00183",
+    serial: "GM-2026-00183",
     patientName: "Amaka Eze",
     age: 28, gender: "Female", phone: "+234 815 222 7711",
     referredBy: "Dr. P. Onyema",
@@ -363,7 +363,7 @@ export const MOCK_FORMS: TestForm[] = [
     results: { lh: "5.2", fsh: "6.1", prolactin: "12.4" },
   },
   {
-    serial: "MV-2026-00182",
+    serial: "GM-2026-00182",
     patientName: "Tunde Balogun",
     age: 45, gender: "Male", phone: "+234 706 909 5512",
     referredBy: "Dr. M. Adeyemi",
@@ -380,7 +380,7 @@ export const MOCK_FORMS: TestForm[] = [
     },
   },
   {
-    serial: "MV-2026-00181",
+    serial: "GM-2026-00181",
     patientName: "Fatima Yusuf",
     age: 31, gender: "Female", phone: "+234 909 121 3344",
     referredBy: "Dr. K. Ibrahim",
@@ -394,7 +394,7 @@ export const MOCK_FORMS: TestForm[] = [
     results: { hb: "12.8", pcv: "39", wbc: "7.2", malariaParasite: "Seen (+)", salTyphiO: "1/160" },
   },
   {
-    serial: "MV-2026-00180",
+    serial: "GM-2026-00180",
     patientName: "Ifeanyi Nwosu",
     age: 52, gender: "Male", phone: "+234 802 555 9090",
     referredBy: "Dr. L. Eze",
@@ -405,7 +405,7 @@ export const MOCK_FORMS: TestForm[] = [
     bill: "Clinic", status: "Pending",
   },
   {
-    serial: "MV-2026-00179",
+    serial: "GM-2026-00179",
     patientName: "Grace Adeyinka",
     age: 26, gender: "Female", phone: "+234 813 700 2211",
     referredBy: "Dr. R. Hassan",

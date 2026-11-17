@@ -5,7 +5,7 @@ import { SITE, buildWhatsAppLink } from "@/lib/site";
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[hsl(278_70%_12%)] via-[hsl(278_60%_18%)] to-[hsl(285_55%_22%)] text-primary-foreground">
+    <footer className="bg-gradient-footer text-primary-foreground">
       <div className="container py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
           <div className="bg-background rounded-2xl p-4 inline-block">

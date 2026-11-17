@@ -336,7 +336,7 @@ const Results = () => {
               <Input
                 id="ref"
                 name="ref"
-                placeholder="e.g. MV-2026-00001"
+                placeholder="e.g. GM-2026-00001"
                 value={serial}
                 onChange={(e) => setSerial(e.target.value)}
                 maxLength={40}
