@@ -9,12 +9,12 @@ import {
   FlaskConical, HeartPulse, Pill, Stethoscope, ArrowRight, Phone, MessageCircle, MapPin,
   Search, CalendarCheck, FlaskRound, FileText, Download, Home, BadgeCheck, Sparkles, Activity, Baby, TestTube
 } from "lucide-react";
+import heroImg from "@/assets/hero-lab.jpg";
 import bloodImg from "@/assets/blood-test.jpg";
 import nurseImg from "@/assets/nurse.jpg";
 import sampleImg from "@/assets/sample.jpg";
 import consultImg from "@/assets/consultation.jpg";
 import { SITE, buildWhatsAppLink } from "@/lib/site";
-import { HeroPortal } from "@/components/home/HeroPortal";
 
 const popularTests = [
   {
@@ -135,7 +135,80 @@ const Index = () => {
         description="MLSCN-licensed medical laboratory in Elioprawo Road, Port Harcourt offering confidential lab tests, consultations, pharmacy and home sample collection. Your Health. Your Privacy. Your Choice."
         keywords="medical laboratory Port Harcourt, lab tests Rivers State, confidential lab Nigeria, blood test Port Harcourt, home sample collection, Green Medical Diagnostics"
       />
-      <HeroPortal />
+      {/* 1. HERO — clinical, full-bleed, calm */}
+      <section className="relative isolate overflow-hidden bg-background">
+        {/* Background image with deep clinical overlay */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src={heroImg}
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
+
+        <div className="container relative pt-28 pb-20 md:pt-36 md:pb-28 lg:pt-44 lg:pb-36 text-primary-foreground">
+          <div className="max-w-3xl space-y-7 animate-fade-up">
+            <div className="flex flex-wrap items-center gap-3 text-xs">
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/10 backdrop-blur border border-white/20 font-medium uppercase tracking-[0.18em]">
+                <BadgeCheck className="h-3.5 w-3.5" /> Licensed Medical Laboratory
+              </span>
+              <span className="inline-flex items-center gap-2 text-primary-foreground/85">
+                <span className="h-1.5 w-1.5 rounded-full bg-success animate-pulse" />
+                Open today · Walk-ins welcome
+              </span>
+            </div>
+
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+              Diagnostics you can <span className="italic font-medium text-primary-glow">trust</span>,
+              <br className="hidden sm:block" /> care that respects your privacy.
+            </h1>
+
+            <p className="text-base md:text-lg text-primary-foreground/85 max-w-2xl leading-relaxed">
+              Green Medical Diagnostics is a full-service medical laboratory in Port Harcourt — delivering accurate results, qualified clinicians, and complete confidentiality at every step.
+            </p>
+
+            <div className="flex flex-wrap gap-3 pt-2">
+              <Button asChild size="lg" className="bg-background text-primary hover:bg-background/90 font-semibold">
+                <Link to="/book">Book a Test <ArrowRight className="h-4 w-4" /></Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-white/40 text-primary-foreground hover:bg-background/10 hover:text-primary-foreground">
+                <Link to="/services">View Test Catalogue</Link>
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-3 pt-4 text-sm text-primary-foreground/85">
+              <a href={`tel:${SITE.phones[0].replace(/\s/g, "")}`} className="inline-flex items-center gap-2 hover:text-primary-foreground">
+                <Phone className="h-4 w-4" /> {SITE.phones[0]}
+              </a>
+              <span className="h-4 w-px bg-white/20 hidden sm:block" />
+              <a href={buildWhatsAppLink("Hello Green Medical, I'd like to book a test.")} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-primary-foreground">
+                <MessageCircle className="h-4 w-4" /> WhatsApp
+              </a>
+              <span className="h-4 w-px bg-white/20 hidden sm:block" />
+              <span className="inline-flex items-center gap-2">
+                <MapPin className="h-4 w-4" /> Elioprawo Road, Port Harcourt
+              </span>
+            </div>
+          </div>
+
+          {/* Trust stat strip */}
+          <div className="mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-white/15 backdrop-blur border border-white/15">
+            {[
+              { k: "200+", v: "Tests offered" },
+              { k: "15+ yrs", v: "Clinical experience" },
+              { k: "24 hr", v: "Avg. turnaround" },
+              { k: "100%", v: "Confidential" },
+            ].map((s) => (
+              <div key={s.v} className="bg-primary/40 backdrop-blur p-5 md:p-6">
+                <p className="font-display text-2xl md:text-3xl font-bold tracking-tight">{s.k}</p>
+                <p className="text-xs md:text-sm text-primary-foreground/80 mt-1">{s.v}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* 2. HOW IT WORKS — clinical process */}
       <section className="relative py-20 md:py-28 bg-background border-y border-border/60">
