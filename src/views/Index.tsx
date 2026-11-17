@@ -9,7 +9,6 @@ import {
   FlaskConical, HeartPulse, Pill, Stethoscope, ArrowRight, Phone, MessageCircle, MapPin,
   Search, CalendarCheck, FlaskRound, FileText, Download, Home, BadgeCheck, Sparkles, Activity, Baby, TestTube
 } from "lucide-react";
-import heroImg from "@/assets/hero-lab.jpg";
 import bloodImg from "@/assets/blood-test.jpg";
 import nurseImg from "@/assets/nurse.jpg";
 import sampleImg from "@/assets/sample.jpg";
