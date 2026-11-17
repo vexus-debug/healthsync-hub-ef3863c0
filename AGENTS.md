@@ -29,4 +29,4 @@ use the editor.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
 
-Imported application structure note.
+Imported TanStack route files are the route source of truth; omit `src/routeTree.gen.ts` because TanStack Router regenerates it.
