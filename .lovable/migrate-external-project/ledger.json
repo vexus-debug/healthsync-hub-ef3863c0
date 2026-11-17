@@ -1,0 +1,18 @@
+{
+  "source": "github",
+  "repository": "https://github.com/vexus-debug/healthsync-hub.git",
+  "capabilities": [
+    { "capability": "application code and assets", "source": "public repository", "outcome": "imported, excluding repository metadata and generated route tree", "status": "complete", "next_action": null },
+    { "capability": "schema", "source": "repository migration files", "outcome": "not copied because existing project instructions prohibit adding supabase/migrations", "status": "pending", "next_action": "Use the Lovable-managed schema workflow before connecting the application's database." },
+    { "capability": "records", "source": "no record export attached", "outcome": "not imported", "status": "pending", "next_action": "Provide a filtered CSV or JSON export if existing records need migration." },
+    { "capability": "auth identities", "source": "external provider indicated by repository configuration", "outcome": "not migrated", "status": "pending", "next_action": "Move authentication to Lovable Cloud if backend migration is requested." },
+    { "capability": "authorization", "source": "repository", "outcome": "not reviewed or migrated", "status": "pending", "next_action": "Review access rules as part of a backend migration." },
+    { "capability": "uploaded file bytes", "source": "repository assets", "outcome": "bundled app assets imported; external storage not reviewed", "status": "pending", "next_action": "Review external storage if backend migration is requested." },
+    { "capability": "external providers", "source": "repository configuration", "outcome": "application integration code imported; no service connection configured", "status": "pending", "next_action": "Configure a managed provider only if backend functionality is requested." },
+    { "capability": "public endpoints", "source": "repository server-function files", "outcome": "source imported; deployment not performed", "status": "pending", "next_action": "Review deployment in a separate backend migration." },
+    { "capability": "callbacks, webhooks, schedules", "source": "repository", "outcome": "not reviewed", "status": "pending", "next_action": "Audit integrations if a production migration is requested." },
+    { "capability": "secrets", "source": "repository environment variable names", "outcome": "no secret values were read or transferred", "status": "pending", "next_action": "Add required values securely only if an integration is requested." },
+    { "capability": "cutover", "source": "source project", "outcome": "not performed", "status": "pending", "next_action": "Only plan after services and data are migrated." },
+    { "capability": "verification", "source": "user instruction", "outcome": "no tests or manual checks run", "status": "pending", "next_action": "User will verify, as requested." }
+  ]
+}

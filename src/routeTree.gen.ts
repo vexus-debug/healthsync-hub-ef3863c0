@@ -10,33 +10,429 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BookRouteImport } from './routes/book'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as FaqsRouteImport } from './routes/faqs'
+import { Route as LocationsRouteImport } from './routes/locations'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as PharmacyRouteImport } from './routes/pharmacy'
+import { Route as ResultsRouteImport } from './routes/results'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ShopRouteImport } from './routes/shop'
+import { Route as DashboardIndexRouteImport } from './routes/dashboard.index'
+import { Route as DashboardCompletedRouteImport } from './routes/dashboard.completed'
+import { Route as DashboardManageTestsRouteImport } from './routes/dashboard.manage-tests'
+import { Route as DashboardPendingRouteImport } from './routes/dashboard.pending'
+import { Route as DashboardPharmacyRouteImport } from './routes/dashboard.pharmacy'
+import { Route as DashboardResultsRouteImport } from './routes/dashboard.results'
+import { Route as DashboardScientistsRouteImport } from './routes/dashboard.scientists'
+import { Route as DashboardSettingsRouteImport } from './routes/dashboard.settings'
+import { Route as DashboardShopRouteImport } from './routes/dashboard.shop'
+import { Route as ScanDashboardIndexRouteImport } from './routes/scan-dashboard.index'
+import { Route as ScanDashboardActivityRouteImport } from './routes/scan-dashboard.activity'
+import { Route as ScanDashboardAppointmentsRouteImport } from './routes/scan-dashboard.appointments'
+import { Route as ScanDashboardRegisterRouteImport } from './routes/scan-dashboard.register'
+import { Route as DashboardFormsIndexRouteImport } from './routes/dashboard.forms.index'
+import { Route as DashboardFormsSerialRouteImport } from './routes/dashboard.forms.$serial'
+import { Route as DashboardFormsNewRouteImport } from './routes/dashboard.forms.new'
+import { Route as ScanDashboardPatientsIndexRouteImport } from './routes/scan-dashboard.patients.index'
+import { Route as ScanDashboardPatientsIdRouteImport } from './routes/scan-dashboard.patients.$id'
+import { Route as ScanDashboardScansIndexRouteImport } from './routes/scan-dashboard.scans.index'
+import { Route as ScanDashboardScansIdRouteImport } from './routes/scan-dashboard.scans.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqsRoute = FaqsRouteImport.update({
+  id: '/faqs',
+  path: '/faqs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsRoute = LocationsRouteImport.update({
+  id: '/locations',
+  path: '/locations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PharmacyRoute = PharmacyRouteImport.update({
+  id: '/pharmacy',
+  path: '/pharmacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResultsRoute = ResultsRouteImport.update({
+  id: '/results',
+  path: '/results',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShopRoute = ShopRouteImport.update({
+  id: '/shop',
+  path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardIndexRoute = DashboardIndexRouteImport.update({
+  id: '/dashboard/',
+  path: '/dashboard/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardCompletedRoute = DashboardCompletedRouteImport.update({
+  id: '/dashboard/completed',
+  path: '/dashboard/completed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardManageTestsRoute = DashboardManageTestsRouteImport.update({
+  id: '/dashboard/manage-tests',
+  path: '/dashboard/manage-tests',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardPendingRoute = DashboardPendingRouteImport.update({
+  id: '/dashboard/pending',
+  path: '/dashboard/pending',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardPharmacyRoute = DashboardPharmacyRouteImport.update({
+  id: '/dashboard/pharmacy',
+  path: '/dashboard/pharmacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardResultsRoute = DashboardResultsRouteImport.update({
+  id: '/dashboard/results',
+  path: '/dashboard/results',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardScientistsRoute = DashboardScientistsRouteImport.update({
+  id: '/dashboard/scientists',
+  path: '/dashboard/scientists',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardSettingsRoute = DashboardSettingsRouteImport.update({
+  id: '/dashboard/settings',
+  path: '/dashboard/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardShopRoute = DashboardShopRouteImport.update({
+  id: '/dashboard/shop',
+  path: '/dashboard/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanDashboardIndexRoute = ScanDashboardIndexRouteImport.update({
+  id: '/scan-dashboard/',
+  path: '/scan-dashboard/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanDashboardActivityRoute = ScanDashboardActivityRouteImport.update({
+  id: '/scan-dashboard/activity',
+  path: '/scan-dashboard/activity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanDashboardAppointmentsRoute =
+  ScanDashboardAppointmentsRouteImport.update({
+    id: '/scan-dashboard/appointments',
+    path: '/scan-dashboard/appointments',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ScanDashboardRegisterRoute = ScanDashboardRegisterRouteImport.update({
+  id: '/scan-dashboard/register',
+  path: '/scan-dashboard/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardFormsIndexRoute = DashboardFormsIndexRouteImport.update({
+  id: '/dashboard/forms/',
+  path: '/dashboard/forms/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardFormsSerialRoute = DashboardFormsSerialRouteImport.update({
+  id: '/dashboard/forms/$serial',
+  path: '/dashboard/forms/$serial',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardFormsNewRoute = DashboardFormsNewRouteImport.update({
+  id: '/dashboard/forms/new',
+  path: '/dashboard/forms/new',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanDashboardPatientsIndexRoute =
+  ScanDashboardPatientsIndexRouteImport.update({
+    id: '/scan-dashboard/patients/',
+    path: '/scan-dashboard/patients/',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ScanDashboardPatientsIdRoute = ScanDashboardPatientsIdRouteImport.update({
+  id: '/scan-dashboard/patients/$id',
+  path: '/scan-dashboard/patients/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanDashboardScansIndexRoute = ScanDashboardScansIndexRouteImport.update({
+  id: '/scan-dashboard/scans/',
+  path: '/scan-dashboard/scans/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanDashboardScansIdRoute = ScanDashboardScansIdRouteImport.update({
+  id: '/scan-dashboard/scans/$id',
+  path: '/scan-dashboard/scans/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book': typeof BookRoute
+  '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/locations': typeof LocationsRoute
+  '/login': typeof LoginRoute
+  '/pharmacy': typeof PharmacyRoute
+  '/results': typeof ResultsRoute
+  '/services': typeof ServicesRoute
+  '/shop': typeof ShopRoute
+  '/dashboard/completed': typeof DashboardCompletedRoute
+  '/dashboard/manage-tests': typeof DashboardManageTestsRoute
+  '/dashboard/pending': typeof DashboardPendingRoute
+  '/dashboard/pharmacy': typeof DashboardPharmacyRoute
+  '/dashboard/results': typeof DashboardResultsRoute
+  '/dashboard/scientists': typeof DashboardScientistsRoute
+  '/dashboard/settings': typeof DashboardSettingsRoute
+  '/dashboard/shop': typeof DashboardShopRoute
+  '/scan-dashboard/activity': typeof ScanDashboardActivityRoute
+  '/scan-dashboard/appointments': typeof ScanDashboardAppointmentsRoute
+  '/scan-dashboard/register': typeof ScanDashboardRegisterRoute
+  '/dashboard/': typeof DashboardIndexRoute
+  '/scan-dashboard/': typeof ScanDashboardIndexRoute
+  '/dashboard/forms/$serial': typeof DashboardFormsSerialRoute
+  '/dashboard/forms/new': typeof DashboardFormsNewRoute
+  '/scan-dashboard/patients/$id': typeof ScanDashboardPatientsIdRoute
+  '/scan-dashboard/scans/$id': typeof ScanDashboardScansIdRoute
+  '/dashboard/forms/': typeof DashboardFormsIndexRoute
+  '/scan-dashboard/patients/': typeof ScanDashboardPatientsIndexRoute
+  '/scan-dashboard/scans/': typeof ScanDashboardScansIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book': typeof BookRoute
+  '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/locations': typeof LocationsRoute
+  '/login': typeof LoginRoute
+  '/pharmacy': typeof PharmacyRoute
+  '/results': typeof ResultsRoute
+  '/services': typeof ServicesRoute
+  '/shop': typeof ShopRoute
+  '/dashboard/completed': typeof DashboardCompletedRoute
+  '/dashboard/manage-tests': typeof DashboardManageTestsRoute
+  '/dashboard/pending': typeof DashboardPendingRoute
+  '/dashboard/pharmacy': typeof DashboardPharmacyRoute
+  '/dashboard/results': typeof DashboardResultsRoute
+  '/dashboard/scientists': typeof DashboardScientistsRoute
+  '/dashboard/settings': typeof DashboardSettingsRoute
+  '/dashboard/shop': typeof DashboardShopRoute
+  '/scan-dashboard/activity': typeof ScanDashboardActivityRoute
+  '/scan-dashboard/appointments': typeof ScanDashboardAppointmentsRoute
+  '/scan-dashboard/register': typeof ScanDashboardRegisterRoute
+  '/dashboard': typeof DashboardIndexRoute
+  '/scan-dashboard': typeof ScanDashboardIndexRoute
+  '/dashboard/forms/$serial': typeof DashboardFormsSerialRoute
+  '/dashboard/forms/new': typeof DashboardFormsNewRoute
+  '/scan-dashboard/patients/$id': typeof ScanDashboardPatientsIdRoute
+  '/scan-dashboard/scans/$id': typeof ScanDashboardScansIdRoute
+  '/dashboard/forms': typeof DashboardFormsIndexRoute
+  '/scan-dashboard/patients': typeof ScanDashboardPatientsIndexRoute
+  '/scan-dashboard/scans': typeof ScanDashboardScansIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book': typeof BookRoute
+  '/contact': typeof ContactRoute
+  '/faqs': typeof FaqsRoute
+  '/locations': typeof LocationsRoute
+  '/login': typeof LoginRoute
+  '/pharmacy': typeof PharmacyRoute
+  '/results': typeof ResultsRoute
+  '/services': typeof ServicesRoute
+  '/shop': typeof ShopRoute
+  '/dashboard/completed': typeof DashboardCompletedRoute
+  '/dashboard/manage-tests': typeof DashboardManageTestsRoute
+  '/dashboard/pending': typeof DashboardPendingRoute
+  '/dashboard/pharmacy': typeof DashboardPharmacyRoute
+  '/dashboard/results': typeof DashboardResultsRoute
+  '/dashboard/scientists': typeof DashboardScientistsRoute
+  '/dashboard/settings': typeof DashboardSettingsRoute
+  '/dashboard/shop': typeof DashboardShopRoute
+  '/scan-dashboard/activity': typeof ScanDashboardActivityRoute
+  '/scan-dashboard/appointments': typeof ScanDashboardAppointmentsRoute
+  '/scan-dashboard/register': typeof ScanDashboardRegisterRoute
+  '/dashboard/': typeof DashboardIndexRoute
+  '/scan-dashboard/': typeof ScanDashboardIndexRoute
+  '/dashboard/forms/$serial': typeof DashboardFormsSerialRoute
+  '/dashboard/forms/new': typeof DashboardFormsNewRoute
+  '/scan-dashboard/patients/$id': typeof ScanDashboardPatientsIdRoute
+  '/scan-dashboard/scans/$id': typeof ScanDashboardScansIdRoute
+  '/dashboard/forms/': typeof DashboardFormsIndexRoute
+  '/scan-dashboard/patients/': typeof ScanDashboardPatientsIndexRoute
+  '/scan-dashboard/scans/': typeof ScanDashboardScansIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book'
+    | '/contact'
+    | '/faqs'
+    | '/locations'
+    | '/login'
+    | '/pharmacy'
+    | '/results'
+    | '/services'
+    | '/shop'
+    | '/dashboard/completed'
+    | '/dashboard/manage-tests'
+    | '/dashboard/pending'
+    | '/dashboard/pharmacy'
+    | '/dashboard/results'
+    | '/dashboard/scientists'
+    | '/dashboard/settings'
+    | '/dashboard/shop'
+    | '/scan-dashboard/activity'
+    | '/scan-dashboard/appointments'
+    | '/scan-dashboard/register'
+    | '/dashboard/'
+    | '/scan-dashboard/'
+    | '/dashboard/forms/$serial'
+    | '/dashboard/forms/new'
+    | '/scan-dashboard/patients/$id'
+    | '/scan-dashboard/scans/$id'
+    | '/dashboard/forms/'
+    | '/scan-dashboard/patients/'
+    | '/scan-dashboard/scans/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/book'
+    | '/contact'
+    | '/faqs'
+    | '/locations'
+    | '/login'
+    | '/pharmacy'
+    | '/results'
+    | '/services'
+    | '/shop'
+    | '/dashboard/completed'
+    | '/dashboard/manage-tests'
+    | '/dashboard/pending'
+    | '/dashboard/pharmacy'
+    | '/dashboard/results'
+    | '/dashboard/scientists'
+    | '/dashboard/settings'
+    | '/dashboard/shop'
+    | '/scan-dashboard/activity'
+    | '/scan-dashboard/appointments'
+    | '/scan-dashboard/register'
+    | '/dashboard'
+    | '/scan-dashboard'
+    | '/dashboard/forms/$serial'
+    | '/dashboard/forms/new'
+    | '/scan-dashboard/patients/$id'
+    | '/scan-dashboard/scans/$id'
+    | '/dashboard/forms'
+    | '/scan-dashboard/patients'
+    | '/scan-dashboard/scans'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/book'
+    | '/contact'
+    | '/faqs'
+    | '/locations'
+    | '/login'
+    | '/pharmacy'
+    | '/results'
+    | '/services'
+    | '/shop'
+    | '/dashboard/completed'
+    | '/dashboard/manage-tests'
+    | '/dashboard/pending'
+    | '/dashboard/pharmacy'
+    | '/dashboard/results'
+    | '/dashboard/scientists'
+    | '/dashboard/settings'
+    | '/dashboard/shop'
+    | '/scan-dashboard/activity'
+    | '/scan-dashboard/appointments'
+    | '/scan-dashboard/register'
+    | '/dashboard/'
+    | '/scan-dashboard/'
+    | '/dashboard/forms/$serial'
+    | '/dashboard/forms/new'
+    | '/scan-dashboard/patients/$id'
+    | '/scan-dashboard/scans/$id'
+    | '/dashboard/forms/'
+    | '/scan-dashboard/patients/'
+    | '/scan-dashboard/scans/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BookRoute: typeof BookRoute
+  ContactRoute: typeof ContactRoute
+  FaqsRoute: typeof FaqsRoute
+  LocationsRoute: typeof LocationsRoute
+  LoginRoute: typeof LoginRoute
+  PharmacyRoute: typeof PharmacyRoute
+  ResultsRoute: typeof ResultsRoute
+  ServicesRoute: typeof ServicesRoute
+  ShopRoute: typeof ShopRoute
+  DashboardCompletedRoute: typeof DashboardCompletedRoute
+  DashboardManageTestsRoute: typeof DashboardManageTestsRoute
+  DashboardPendingRoute: typeof DashboardPendingRoute
+  DashboardPharmacyRoute: typeof DashboardPharmacyRoute
+  DashboardResultsRoute: typeof DashboardResultsRoute
+  DashboardScientistsRoute: typeof DashboardScientistsRoute
+  DashboardSettingsRoute: typeof DashboardSettingsRoute
+  DashboardShopRoute: typeof DashboardShopRoute
+  ScanDashboardActivityRoute: typeof ScanDashboardActivityRoute
+  ScanDashboardAppointmentsRoute: typeof ScanDashboardAppointmentsRoute
+  ScanDashboardRegisterRoute: typeof ScanDashboardRegisterRoute
+  DashboardIndexRoute: typeof DashboardIndexRoute
+  ScanDashboardIndexRoute: typeof ScanDashboardIndexRoute
+  DashboardFormsSerialRoute: typeof DashboardFormsSerialRoute
+  DashboardFormsNewRoute: typeof DashboardFormsNewRoute
+  ScanDashboardPatientsIdRoute: typeof ScanDashboardPatientsIdRoute
+  ScanDashboardScansIdRoute: typeof ScanDashboardScansIdRoute
+  DashboardFormsIndexRoute: typeof DashboardFormsIndexRoute
+  ScanDashboardPatientsIndexRoute: typeof ScanDashboardPatientsIndexRoute
+  ScanDashboardScansIndexRoute: typeof ScanDashboardScansIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +444,251 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faqs': {
+      id: '/faqs'
+      path: '/faqs'
+      fullPath: '/faqs'
+      preLoaderRoute: typeof FaqsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations': {
+      id: '/locations'
+      path: '/locations'
+      fullPath: '/locations'
+      preLoaderRoute: typeof LocationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pharmacy': {
+      id: '/pharmacy'
+      path: '/pharmacy'
+      fullPath: '/pharmacy'
+      preLoaderRoute: typeof PharmacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/results': {
+      id: '/results'
+      path: '/results'
+      fullPath: '/results'
+      preLoaderRoute: typeof ResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shop': {
+      id: '/shop'
+      path: '/shop'
+      fullPath: '/shop'
+      preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/': {
+      id: '/dashboard/'
+      path: '/dashboard'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof DashboardIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/completed': {
+      id: '/dashboard/completed'
+      path: '/dashboard/completed'
+      fullPath: '/dashboard/completed'
+      preLoaderRoute: typeof DashboardCompletedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/manage-tests': {
+      id: '/dashboard/manage-tests'
+      path: '/dashboard/manage-tests'
+      fullPath: '/dashboard/manage-tests'
+      preLoaderRoute: typeof DashboardManageTestsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/pending': {
+      id: '/dashboard/pending'
+      path: '/dashboard/pending'
+      fullPath: '/dashboard/pending'
+      preLoaderRoute: typeof DashboardPendingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/pharmacy': {
+      id: '/dashboard/pharmacy'
+      path: '/dashboard/pharmacy'
+      fullPath: '/dashboard/pharmacy'
+      preLoaderRoute: typeof DashboardPharmacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/results': {
+      id: '/dashboard/results'
+      path: '/dashboard/results'
+      fullPath: '/dashboard/results'
+      preLoaderRoute: typeof DashboardResultsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/scientists': {
+      id: '/dashboard/scientists'
+      path: '/dashboard/scientists'
+      fullPath: '/dashboard/scientists'
+      preLoaderRoute: typeof DashboardScientistsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/settings': {
+      id: '/dashboard/settings'
+      path: '/dashboard/settings'
+      fullPath: '/dashboard/settings'
+      preLoaderRoute: typeof DashboardSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/shop': {
+      id: '/dashboard/shop'
+      path: '/dashboard/shop'
+      fullPath: '/dashboard/shop'
+      preLoaderRoute: typeof DashboardShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/': {
+      id: '/scan-dashboard/'
+      path: '/scan-dashboard'
+      fullPath: '/scan-dashboard/'
+      preLoaderRoute: typeof ScanDashboardIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/activity': {
+      id: '/scan-dashboard/activity'
+      path: '/scan-dashboard/activity'
+      fullPath: '/scan-dashboard/activity'
+      preLoaderRoute: typeof ScanDashboardActivityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/appointments': {
+      id: '/scan-dashboard/appointments'
+      path: '/scan-dashboard/appointments'
+      fullPath: '/scan-dashboard/appointments'
+      preLoaderRoute: typeof ScanDashboardAppointmentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/register': {
+      id: '/scan-dashboard/register'
+      path: '/scan-dashboard/register'
+      fullPath: '/scan-dashboard/register'
+      preLoaderRoute: typeof ScanDashboardRegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/forms/': {
+      id: '/dashboard/forms/'
+      path: '/dashboard/forms'
+      fullPath: '/dashboard/forms/'
+      preLoaderRoute: typeof DashboardFormsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/forms/$serial': {
+      id: '/dashboard/forms/$serial'
+      path: '/dashboard/forms/$serial'
+      fullPath: '/dashboard/forms/$serial'
+      preLoaderRoute: typeof DashboardFormsSerialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/forms/new': {
+      id: '/dashboard/forms/new'
+      path: '/dashboard/forms/new'
+      fullPath: '/dashboard/forms/new'
+      preLoaderRoute: typeof DashboardFormsNewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/patients/': {
+      id: '/scan-dashboard/patients/'
+      path: '/scan-dashboard/patients'
+      fullPath: '/scan-dashboard/patients/'
+      preLoaderRoute: typeof ScanDashboardPatientsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/patients/$id': {
+      id: '/scan-dashboard/patients/$id'
+      path: '/scan-dashboard/patients/$id'
+      fullPath: '/scan-dashboard/patients/$id'
+      preLoaderRoute: typeof ScanDashboardPatientsIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/scans/': {
+      id: '/scan-dashboard/scans/'
+      path: '/scan-dashboard/scans'
+      fullPath: '/scan-dashboard/scans/'
+      preLoaderRoute: typeof ScanDashboardScansIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan-dashboard/scans/$id': {
+      id: '/scan-dashboard/scans/$id'
+      path: '/scan-dashboard/scans/$id'
+      fullPath: '/scan-dashboard/scans/$id'
+      preLoaderRoute: typeof ScanDashboardScansIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BookRoute: BookRoute,
+  ContactRoute: ContactRoute,
+  FaqsRoute: FaqsRoute,
+  LocationsRoute: LocationsRoute,
+  LoginRoute: LoginRoute,
+  PharmacyRoute: PharmacyRoute,
+  ResultsRoute: ResultsRoute,
+  ServicesRoute: ServicesRoute,
+  ShopRoute: ShopRoute,
+  DashboardCompletedRoute: DashboardCompletedRoute,
+  DashboardManageTestsRoute: DashboardManageTestsRoute,
+  DashboardPendingRoute: DashboardPendingRoute,
+  DashboardPharmacyRoute: DashboardPharmacyRoute,
+  DashboardResultsRoute: DashboardResultsRoute,
+  DashboardScientistsRoute: DashboardScientistsRoute,
+  DashboardSettingsRoute: DashboardSettingsRoute,
+  DashboardShopRoute: DashboardShopRoute,
+  ScanDashboardActivityRoute: ScanDashboardActivityRoute,
+  ScanDashboardAppointmentsRoute: ScanDashboardAppointmentsRoute,
+  ScanDashboardRegisterRoute: ScanDashboardRegisterRoute,
+  DashboardIndexRoute: DashboardIndexRoute,
+  ScanDashboardIndexRoute: ScanDashboardIndexRoute,
+  DashboardFormsSerialRoute: DashboardFormsSerialRoute,
+  DashboardFormsNewRoute: DashboardFormsNewRoute,
+  ScanDashboardPatientsIdRoute: ScanDashboardPatientsIdRoute,
+  ScanDashboardScansIdRoute: ScanDashboardScansIdRoute,
+  DashboardFormsIndexRoute: DashboardFormsIndexRoute,
+  ScanDashboardPatientsIndexRoute: ScanDashboardPatientsIndexRoute,
+  ScanDashboardScansIndexRoute: ScanDashboardScansIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

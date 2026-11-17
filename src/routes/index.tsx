@@ -1,23 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
+import IndexPage from "@/views/Index";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Green Medical Diagnostics — Confidential Medical Laboratory in Port Harcourt" },
+      { name: "description", content: "Confidential lab tests, consultations, pharmacy and home sample pickup in Port Harcourt." },
+      { property: "og:title", content: "Green Medical Diagnostics — Confidential Medical Laboratory in Port Harcourt" },
+      { property: "og:description", content: "Confidential lab tests, consultations, pharmacy and home sample pickup in Port Harcourt." },
+    ],
+  }),
+  component: IndexPage,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
